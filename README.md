@@ -1,2 +1,2 @@
-# panigreeva
-This repo is for testing panipuri and pav bhaji.
+# Accounting Cleanup
+This repo is for clearing records of account.move 
