@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_accounting_cleanup_wizard" model="ir.ui.view">
+            <field name="name">accounting.cleanup.wizard.form</field>
+            <field name="model">accounting.cleanup.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Clean Accounting Data">
+                    <footer>
+                        <button name="action_cleanup_accounting_data" type="object" string="Delete All Accounting Data"
+                                class="btn-danger"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_accounting_cleanup_wizard" model="ir.actions.act_window">
+            <field name="name">Accounting Cleanup</field>
+            <field name="res_model">accounting.cleanup.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_accounting_cleanup" name="Accounting Cleanup" parent="insurance.settings"
+                  action="action_accounting_cleanup_wizard"/>
+    </data>
+</odoo>
