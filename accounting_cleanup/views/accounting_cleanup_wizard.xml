@@ -7,9 +7,10 @@
             <field name="arch" type="xml">
                 <form string="Clean Accounting Data">
                     <footer>
-                        <button name="action_cleanup_accounting_data" type="object" string="Delete All Accounting Data"
-                                class="btn-danger"/>
-                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        <button name="action_cleanup_accounting_data" type="object"
+                            string="Delete All Accounting Data"
+                            class="btn-danger" />
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
                     </footer>
                 </form>
             </field>
@@ -22,7 +23,8 @@
             <field name="target">new</field>
         </record>
 
-        <menuitem id="menu_accounting_cleanup" name="Accounting Cleanup" parent="insurance.settings"
-                  action="action_accounting_cleanup_wizard"/>
+        <menuitem id="menu_accounting_cleanup" name="Accounting Cleanup"
+            parent="account.menu_account_config"
+            action="action_accounting_cleanup_wizard" sequence="32" />
     </data>
 </odoo>
